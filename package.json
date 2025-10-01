@@ -1,0 +1,63 @@
+{
+  "name": "persona-chat-ai-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/react-window": "^1.8.0",
+    "autoprefixer": "^10.4.0",
+    "boring-avatars": "^1.10.0",
+    "postcss": "^8.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.0",
+    "react-markdown": "^8.0.0",
+    "react-router-dom": "^6.15.0",
+    "react-scripts": "5.0.1",
+    "react-window": "^1.8.0",
+    "tailwindcss": "^3.3.0",
+    "web-vitals": "^3.3.0",
+    "zod": "^3.22.0",
+    "zustand": "^4.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:unit": "react-scripts test --testPathIgnorePatterns=\"integration|e2e\" --watchAll=false",
+    "test:integration": "react-scripts test --testPathPattern=\"integration\" --watchAll=false",
+    "test:e2e": "react-scripts test --testPathPattern=\"e2e\" --watchAll=false",
+    "test:performance": "react-scripts test --testPathPattern=\"performance\" --watchAll=false",
+    "test:ci": "react-scripts test --watchAll=false --coverage",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.0",
+    "typescript": "^4.9.5"
+  },
+  "proxy": "http://localhost:3001"
+}
