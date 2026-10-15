@@ -1,5 +1,7 @@
 # PersonaChatAI Frontend
 
+[![CI](https://github.com/Caesarcph/persona-chat-ai-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/Caesarcph/persona-chat-ai-frontend/actions/workflows/ci.yml)
+
 A React and TypeScript-based frontend for AI chat application with personalized AI character creation and conversation capabilities.
 <img width="1294" height="912" alt="image" src="https://github.com/user-attachments/assets/35c08f2c-366b-4b6f-93ea-37664e93af52" />
 

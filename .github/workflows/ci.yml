@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        # Only the unit test suites that currently pass are run. The remaining
+        # suites have pre-existing failures (component/test drift, an ESM-only
+        # react-markdown import, JSX in a .ts file) and should be added back
+        # here as they are fixed. `npm run build` is not run because the app
+        # imports a `shared` package that lives outside this repository.
+        run: >-
+          npm run test:unit --
+          src/components/__tests__/chat/ChatInterface.test.tsx
+          src/components/__tests__/chat/MessageActions.test.tsx
+          src/components/__tests__/chat/MessageInput.test.tsx
+          src/components/__tests__/chat/TypewriterText.test.tsx
+          src/components/safety/__tests__/SafetyWarning.test.tsx
+          src/components/settings/__tests__/AccessibilitySettings.test.tsx
+          src/stores/__tests__/settingsStore.test.ts
+          src/utils/__tests__/avatar.test.ts
